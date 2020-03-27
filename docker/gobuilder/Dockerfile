@@ -22,3 +22,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         docker-ce-cli \
         containerd.io
 RUN go get -u golang.org/x/lint/golint
+RUN go get -u github.com/khezen/cmtpr

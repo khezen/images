@@ -17,9 +17,9 @@ RUN add-apt-repository \
 # Install desired tools
 RUN apt-get update && apt-get install -y --no-install-recommends \
         git \
-		gawk \
+	gawk \
         docker-ce \
         docker-ce-cli \
         containerd.io
-RUN go get -u golang.org/x/lint/golint
+RUN go get -u golang.org/x/lint/golint 
 RUN go get -u github.com/khezen/cmtpr/cmd/cmtpr

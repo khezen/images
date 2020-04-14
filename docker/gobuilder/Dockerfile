@@ -2,6 +2,7 @@ FROM golang:buster
 
 # Perpare
 RUN apt-get update && apt-get install -y --no-install-recommends \
+        bash \
         apt-transport-https \
         ca-certificates \
         curl \

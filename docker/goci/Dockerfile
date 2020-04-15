@@ -22,5 +22,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         docker-ce \
         docker-ce-cli \
         containerd.io
-RUN go get -u golang.org/x/lint/golint 
-RUN go get -u github.com/khezen/cmtpr/cmd/cmtpr
+RUN go install golang.org/x/lint/golint
+RUN go install github.com/khezen/cmtpr/cmd/cmtpr
+RUN curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.24.0
